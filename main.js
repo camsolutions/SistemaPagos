@@ -71,12 +71,12 @@ var	USER = document.getElementById('id').value;
 
 	var a,p,th,tbody,tr1,td1,texto1,td2,texto2,td3,texto3,td4,texto4,td5,texto5;    
 	a=0;
-	a =a++;
+	a = a + 1;
 	tbody = document.getElementById("tbody");
 	tr1 =document.createElement("tr");
 	td1 = document.createElement("td");
 	th= document.createElement("th");
-	texto1 = document.createTextNode(a);
+	texto1 = document.createTextNode(doc.id);
 	th.appendChild(texto1);
 	tr1.appendChild(td1);
 	td1.appendChild(th);
