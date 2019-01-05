@@ -1,206 +1,704 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CAM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
 
-  <head>
+  <!-- 
+	//////////////////////////////////////////////////////
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-        
-    <title>SB Admin - Dashboard</title>
-    
-        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-        
-    <script>
-      // Initialize Firebase
-     const config = {
-        apiKey: "AIzaSyDW4BkCzwV_1zh-ynkLKzpDmSmnkaYJAWU",
-        authDomain: "cam-apps-82cf1.firebaseapp.com",
-        databaseURL: "https://cam-apps-82cf1.firebaseio.com",
-        projectId: "cam-apps-82cf1",
-        storageBucket: "cam-apps-82cf1.appspot.com",
-        messagingSenderId: "645360393671"
-      };
-      firebase.initializeApp(config);
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
 
-  const firestore = firebase.firestore();
-  const settings = {/* your settings... */ timestampsInSnapshots: true};
-  firestore.settings(settings);
+	//////////////////////////////////////////////////////
+	 -->
 
-    </script>
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-    <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 
-    <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+	-->
+	<link rel="stylesheet" href="css/style.css">
 
-  </head>
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="css/style.css">
+	<!-- End demo purposes only -->
 
-  <body id="page-top">
 
-    
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: block;
+		margin-bottom: 5px!important;
+		float: left;
+		width: 100%;
+	}
+	#colour-variations li a {
+		width: 100%;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-transition: 0.4s;
+		-o-transition: 0.4s;
+		transition: 0.4s;
+	}
+	#colour-variations li a:hover {
+	  	opacity: .9;
+	}
+	#colour-variations li a > span {
+		width: 33.33%;
+		height: 20px;
+		float: left;
+		display: -moz-inline-stack;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
 
-    <div id="wrapper">
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
 
-      <!-- Sidebar -->
-       <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>CAM-TOOLS</span>
-          </a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Registrar Pagos</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="usuarios.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Pagos Registrados</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sistema.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Sobre el Sistema</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Estadisticas</span></a>
-        </li>
-      </ul>
 
-      <div id="content-wrapper">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-        <div class="container-fluid">
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		         <a class="navbar-brand" href="index.html">TECNOLOGÍA WEB</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>INICIO</span></a></li>
+		            <li><a href="#" data-nav-section="work"><span>PORTAFOLIO</span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>PROCESO</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>SERVICIOS</span></a></li>
+		            <li><a href="#" data-nav-section="about"><span>SOBRE CAM</span></a></li>
+		            <li><a href="#" data-nav-section="contact"><span>CONTACTO</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
 
-        
-         
-          <!-- Area Chart Example-->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fas fa-chart-area"></i>
-              Registrar Pagos</div>
-            <div class="card-body">
-              
-        
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+		<div class="gradient"></div>
+		<div class="container">
+			<div class="text-wrap">
+				<div class="text-inner">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="to-animate">INNOVA EN TU NEGOCIO.</h1>
+							<h2 class="to-animate">Supera a tu competencia y sube de nivel instalando nuestra tecnología a tus ventas</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slant"></div>
+	</section>
 
-      
+	<section id="fh5co-intro">
+		<div class="container">
+			<div class="row row-bottom-padded-lg">
+				<div class="fh5co-block to-animate" style="background-image: url(images/img_7.jpg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-bulb"></i>
+						<h2>Ideas</h2>
+						<p>Hablanos de tus ideas, como esperas mejorar lo que ya tienes y en caso de estar empezando tu proyecto.</p>
+						<p><a href="#" class="btn btn-primary">Mirame</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/img_8.jpg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-wrench"></i>
+						<h2>Desarrollo</h2>
+						<p>Somos capaces de realizar cualquier tipo de idea que tengas en mente solo necesitamos que nos las expreses.</p>
+						<p><a href="#" class="btn btn-primary">Pincha aquí</a></p>
+					</div>
+				</div>
+				<div class="fh5co-block to-animate" style="background-image: url(images/img_10.jpg);">
+					<div class="overlay-darker"></div>
+					<div class="overlay"></div>
+					<div class="fh5co-text">
+						<i class="fh5co-intro-icon icon-rocket"></i>
+						<h2>Aventurate</h2>
+						<p>Participa en nuestras herramientas web para alcanzar un nuevo nivel de innovación. No te quedes atras!</p>
+						<p><a href="#" class="btn btn-primary">Por que nosotros?</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row watch-video text-center to-animate">
+				<span>Mira el proceso</span>
 
-  <h3 class="mt-3 mb-3">Registrar Pago</h3>
-  
-    
+				<iframe id="iframe" width="480" height="270" src="" frameborder="0"></iframe>
+				<script>
+					
+					function cargar() {
+			document.getElementById('iframe').src = "https://www.powtoon.com/embed/bWQy53sbnPC/";
+					}
+					cargar();
+				
+				
+				</script>
+			</div>
+		</div>
+	</section>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">N° Referencia</label>
-    <input type="text" class="form-control" id="numero" aria-describedby="emailHelp">
-    
-  </div>
-   <div class="form-group">
-    <label for="exampleInputEmail1">Monto Pagado</label>
-    <input type="text" class="form-control" id="monto" aria-describedby="emailHelp">
-    
-  </div>
-   <div class="form-group">
-    <label for="exampleInputEmail1">Banco</label>
-    <input type="text" class="form-control " id="banco" aria-describedby="emailHelp">
-    
-  </div>
-   </div>
-   <div class="form-group container">
-    <label for="exampleInputEmail1" class="">Concepto</label>
-    <input type="text" class="form-control  " id="concepto" aria-describedby="emailHelp">
-    
-  </div>
+	<section id="fh5co-work" data-section="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Portafolio</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+								<h3>¡Ponemos a tu alcance demostraciones de nuestros trabajos!</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_4.png" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px;" src="images/work_4.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>TEMPLATED</h2>
+						<span>Plantilla</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_2.jpg" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px;" src="images/work_2.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>REGISTRO PAGOS</h2>
+						<span>Web</span>
+						</div>
+					</a>
+				</div>
 
-  <div class="form-group container">
-    <label for="exampleInputPassword1" class="">Negocio</label>
-    <input type="text" class="form-control " id="id" placeholder="ID del negocio">
-  </div>
-  <a onclick="login()" type="submit" class="btn btn-primary">Submit</a>
 
-      
-  
-            </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-          </div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_3.png" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 260px;" src="images/work_3.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2></h2>
+						<span>INVENTARIO</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_7.jpg" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px;" src="images/work_7.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>CATALOGO DE PEDIDOS</h2>
+						<span>UI/UX</span>
+						</div>
+					</a>
+				</div>
+				
+	
 
-          <!-- DataTables Example -->
-         
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_5.jpg" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px;" src="images/work_8.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>AGENDA VIRTUAL</h2>
+						<span>Photography</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_6.png" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px;" src="images/work_6.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>TEMPLATED</h2>
+						<span>Plantilla</span>
+						</div>
+					</a>
+				</div>
+				
 
-        </div>
-        <!-- /.container-fluid -->
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_5.png" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px;" src="images/work_5.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>TIENDA ONLINE</h2>
+						<span>Web</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_8.jpg" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px; " src="images/work_8.jpg" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>SISTEMA INTERNO</h2>
+						<span>Sketch</span>
+						</div>
+					</a>
+				</div>
 
-        <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>© CAM-TOOLS 2018</span>
-            </div>
-          </div>
-        </footer>
+				<div class="clearfix visible-sm-block"></div>
 
-      </div>
-      <!-- /.content-wrapper -->
+				<div class="col-md-4 col-sm-6 col-xxs-12">
+					<a href="images/work_1.png" class="fh5co-project-item image-popup to-animate">
+						<img style="height: 250px; " src="images/work_1.png" alt="Image" class="img-responsive">
+						<div class="fh5co-text">
+						<h2>Programador</h2>
+						<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center to-animate">
+					<p>Descubre la promoción oculta.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    </div>
-    <!-- /#wrapper -->
+	<section id="fh5co-testimonials" data-section="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Proceso de Negocio</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Trabajamos en base a la eficiencia de los pedidos.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>Le hacemos un diseño a medida junto a un demo con el cual pueda asegurar que somos lo que usted necesita.</p>
+						</blockquote>
+						
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>Procedemos a darle un link con el cual podrá monitoriar su pedido en cualquier momento y en todas sus facetas.</p>
+						</blockquote>
+						
+					</div>
+				</div>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+				<div class="col-md-4">
+					<div class="box-testimony">
+						<blockquote class="to-animate-2">
+							<p>Usamos servidores de google(Firebase) y repositorios ubicados en github por lo que no se cobra hosting.</p>
+						</blockquote>
+						
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<section id="fh5co-services" data-section="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-left">
+					<h2 class=" left-border to-animate">Servicios</h2>
+					<div class="row">
+						<div class="col-md-8 subtext to-animate">
+							<h3>A continuacion se presentan nuestras especialidades en web</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-anchor"></i>
+					<h3>Posicionamiento Web</h3>
+					<p>Con un arduo estudio del trafico de busquedas en los navegadores mas populares garantizamos la ubicación de su pagina en las primeras vistas.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-layers2"></i>
+					<h3>Bases de Datos</h3>
+					<p>Descubra la tecnología en tiempo real con nosotros, no hay mejor forma de aprovechar el día sabiendo que se puede monitorear cualquier actividad en vivo sin complicaciones.</p>
+				</div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+				<div class="clearfix visible-sm-block"></div>
 
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-video2"></i>
+					<h3>Herramientas Empresariales</h3>
+					<p>Cada mes sacamos a la venta una nueva version de CAMTOOLs donde podras obtener a tu disposición plataformas para todo tipo de profesional.</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-monitor"></i>
+					<h3>APPS</h3>
+					<p>Desarrollamos cualquier proyecto que tenga planteado siempre y cuando se ubique en nuestras areas de Tecnología Web.</p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	
+	<section id="fh5co-about" data-section="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Sobre Nosotros</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Somos visionarios innovadores que buscan la excelencia de servicios en los negocios de los clientes a quienes servimos</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img style="width: 120px; height: 120px;" src="images/person1.jpg" alt="Image"></figure>
+						<h3>Stephanie Mora</h3>
+						<span class="fh5co-position"></span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img style="width: 120px; height: 120px;" src="images/person2.jpg" alt="Image"></figure>
+						<h3>Ricardo Contreras</h3>
+						<span class="fh5co-position">Web Developer</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-person text-center to-animate">
+						<figure><img style="width: 120px; height: 120px;" src="images/person3.jpg" alt="Image"></figure>
+						<h3>Samuel Amaya</h3>
+						<span class="fh5co-position">Web Designer</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
+						<ul class="social social-circle">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="fh5co-counters" style="background-image: url(images/full_image_1.jpg);" data-stellar-background-ratio="0.5">
+		<div class="fh5co-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Que actividades se estan realizando</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-briefcase to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="8945343" data-speed="5000" data-refresh-interval="50">23300877</span>
+						<span class="fh5co-counter-label">lineas de codigo</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-code to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="234" data-speed="5000" data-refresh-interval="50">240</span>
+						<span class="fh5co-counter-label">Ideas de innovacion</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-cup to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="1302" data-speed="5000" data-refresh-interval="50">154423</span>
+						<span class="fh5co-counter-label">Salidas por un cafe</span>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="fh5co-counter to-animate">
+						<i class="fh5co-counter-icon icon-people to-animate-2"></i>
+						<span class="fh5co-counter-number js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="50">8</span>
+						<span class="fh5co-counter-label">Trabajadores</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-      <script src="js/sb-admin.js"></script>
+	<section id="fh5co-contact" data-section="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">SALGAMOS POR UN CAFE</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+							<h3>Si te encuentras en Venezuela puedes establecer un reunión con nosotros</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-md">
+				<div class="col-md-6 to-animate">
+					<h3>Informacion de Contacto</h3>
+					<ul class="fh5co-contact-info">
+						<li class="fh5co-contact-address ">
+							<i class="icon-home"></i>
+							Caracas, Venezuela
+						</li>
+						<li><i class="icon-phone"></i> +58 416-6224079</li>
+						<li><i class="icon-envelope"></i>campracticalsolutions@gmail.com</li>
+						
+					</ul>
+				</div>
 
-    <!-- Demo scripts for this page-->
-    <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
+				<div class="col-md-6 to-animate">
+					<h3>Formulario de Contacto</h3>
+					<div class="form-group ">
+						<label for="name" class="sr-only">Nombre</label>
+						<input id="name" class="form-control" placeholder="Nombre" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="email" class="sr-only">Email</label>
+						<input id="email" class="form-control" placeholder="Email" type="email">
+					</div>
+					<div class="form-group ">
+						<label for="phone" class="sr-only">Telefono</label>
+						<input id="phone" class="form-control" placeholder="Telefono" type="text">
+					</div>
+					<div class="form-group ">
+						<label for="message" class="sr-only">Mensaje</label>
+						<textarea name="" id="message" cols="30" rows="5" class="form-control" placeholder="Mensaje"></textarea>
+					</div>
+					<div class="form-group ">
+						<input class="btn btn-primary btn-lg" value="Enviar" type="submit">
+					</div>
+					</div>
+				</div>
 
-  </body>
+			</div>
+		</div>
+			</section>
+	
+	
+	<footer id="footer" role="contentinfo">
+		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+		<div class="container">
+			<div class="">
+				<div class="col-md-12 text-center">
+					<p>&copy; CREA ANALIZA Y MUEVE EL MUNDO.</p>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://www.instagram.com/cualquiercambio"><i class="icon-instagram"></i></a></li>
+						<li><a href="https://www.facebook.com/cualquiercambio"><i class="icon-facebook"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	
+	<!-- For demo purposes Only ( You may delete this anytime :-) -->
+	
+	<!-- End demo purposes only -->
 
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Counter -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="js/jquery.style.switcher.js"></script>
+	<script>
+		$(function(){
+			$('#colour-variations ul').styleSwitcher({
+				defaultThemeId: 'theme-switch',
+				hasPreview: false,
+				cookie: {
+		          	expires: 30,
+		          	isManagingLoad: true
+		      	}
+			});	
+			$('.option-toggle').click(function() {
+				$('#colour-variations').toggleClass('sleep');
+			});
+		});
+	</script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
 </html>
+
