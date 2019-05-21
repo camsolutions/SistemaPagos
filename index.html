@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700,700i,900,900i&display=swap" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.css"></script>
 </head>
-<body style="color: white; font-family: 'Poppins', sans-serif;">
+<body style="color: white; font-family: 'Poppins', sans-serif;" id="INICIO">
 	
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
 	    		li:hover{text-decoration: overline;}
 	    	</style>
   	    <li class="nav-item active">
- 	       <a class="nav-link" href="#"> INICIO</a> 
+ 	       <a class="nav-link" href="#INICIO"> INICIO</a> 
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#PROMOCIONES">PROMOCIONES</a>
@@ -264,6 +264,35 @@
 		<p class="text-center">Todos los derechos reservados por  Crea, Analiza y Mueve el mundo ©2019 </p>
 
 	</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>		
+	<script type="text/javascript">
+		$(function(){
+
+     $('a[href*=#]').click(function() {
+
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+
+             var $target = $(this.hash);
+
+             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+             if ($target.length) {
+
+                 var targetOffset = $target.offset().top;
+
+                 $('html,body').animate({scrollTop: targetOffset}, 1000);
+
+                 return false;
+
+            }
+
+       }
+
+   });
+
+});
+	</script>
 
 </body>
 </html>
