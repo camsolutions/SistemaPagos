@@ -8,13 +8,20 @@
 		background: rgba(0,0,0,0.4); 
 	
 	}
-
+	.Menu{
+		width: 100px;
+		height: 100px;
+	}
 }
 
 @media (min-width: 450px) and (max-width: 10000px) { 
 	#iframe {
 		width: 450px;
 		height: 425px;
+	}
+	.Menu{
+		width: 250px;
+		height: 250px;
 	}
 
 }
