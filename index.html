@@ -45,12 +45,12 @@
 	
 	<img src="Fondo.png" style="position: fixed; z-index: -1;width: 100%; height: 100%;">
 	
-	<div class="container w-75 text-center p-5 mb-5 section">
-		<img src="Logo.png" class="mx-auto text-center mt-5 mb-5 w-50">
-		<p class="">BIENVENIDO</p><br>
-		<p class="w-75 text-center mx-auto">Le aseguramos que cada cliente tendrá anteción personalizada, y un 
+	<div id="Contorno" class="container w-75 text-center p-5 mb-5 section">
+		<img id="logo" src="Logo.png" class="mx-auto text-center mt-5 mb-5 w-50">
+		<p id="BIENVENIDO" class="">BIENVENIDO</p><br>
+		<p id="Texto" class="w-100 text-center mx-auto">Le aseguramos que cada cliente tendrá anteción personalizada, y un 
 		excelente servicio.</p>
-		<p class=" mt-5" style="font:bold;">Dejanos Enamorar tu Paladar</p>		
+		<p id="Slogan" class=" mt-5" style="font:bold;">Dejanos Enamorar tu Paladar</p>		
 
 	</div>
 	<p id="PROMOCIONES"></p>
@@ -281,6 +281,14 @@ $(document).ready(function() {
     return false;
   });
 });
+
+if (window.screen.width < 700) {
+
+	document.getElementById('logo').setAttribute("class","mx-auto text-center mt-5 mb-5 w-100");
+	document.getElementById('BIENVENIDO').setAttribute("class","h4 mx-auto text-center");
+	document.getElementById('Contorno').setAttribute("class","container w-100 text-center p-5 mb-5 section");
+
+}
 </script>
 
 
