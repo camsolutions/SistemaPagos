@@ -1,0 +1,15 @@
+@media (min-width: 0px) and (max-width: 450px) { 
+	#iframe {
+		width: 200px;
+		height: 250px;
+	}
+
+}
+
+@media (min-width: 450px) and (max-width: 10000px) { 
+	#iframe {
+		width: 450px;
+		height: 425px;
+	}
+
+}
