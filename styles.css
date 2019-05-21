@@ -4,6 +4,11 @@
 		height: 250px;
 	}
 
+	#menu{
+		background: rgba(0,0,0,0.3); 
+	
+	}
+
 }
 
 @media (min-width: 450px) and (max-width: 10000px) { 
